@@ -1,4 +1,4 @@
-print('Hello World!')
+print('\n\n\nHello World!')
 print('Welcome to my Tic Tac Toe game!\n')
 victory = 'none'
 var1, var2, var3 = '~', '~', '~'
@@ -73,6 +73,18 @@ while victory == 'none':
 	var1 == 'X' and var5 == 'X' and var9 == 'X' or
 	var3 == 'X' and var5 == 'X' and var7 == 'X'):
 		victory = 'true'
+		break
+	if (var1 == 'O' and var2 == 'O' and var3 == 'O' or
+	var4 == 'O' and var5 == 'O' and var6 == 'O' or
+	var7 == 'O' and var8 == 'O' and var9 == 'O' or
+	var1 == 'O' and var4 == 'O' and var7 == 'O' or
+	var2 == 'O' and var5 == 'O' and var8 == 'O' or
+	var3 == 'O' and var6 == 'O' and var9 == 'O' or
+	var1 == 'O' and var5 == 'O' and var9 == 'O' or
+	var3 == 'O' and var5 == 'O' and var7 == 'O'):
+		victory = 'false'
+		break
+	
 print(var1, var2, var3)
 print(var4, var5, var6)
 print(var7, var8, var9)
