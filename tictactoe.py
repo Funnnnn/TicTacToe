@@ -60,6 +60,8 @@ while victory == 'none':
 			print('\nInvalid selection\n\n\n')
 	elif var == 'Trevor is amazing':
 		victory = 'true'
+	elif var == 'Tie game':
+		victory = 'tie'
 	else:
 		print('\nInvalid selection\n\n\n')
 	if (var1 == 'X' and var2 == 'X' and var3 == 'X' or
@@ -76,5 +78,7 @@ print(var4, var5, var6)
 print(var7, var8, var9)
 if victory == 'true':
 	print('\nCongratulations! You win!')
+elif victory == 'tie':
+	print("\nCat's game!")
 else:
 	print('\nYou lost. So hard.')
