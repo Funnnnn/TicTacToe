@@ -62,6 +62,15 @@ while victory == 'none': # Starting the while loop
 		victory = 'true'
 	else:
 		print('\nInvalid selection\n\n\n')
+	if (var1 == 'X' and var2 == 'X' and var3 == 'X') or
+	(var4 == 'X' and var5 == 'X' and var6 == 'X') or
+	(var7 == 'X' and var8 == 'X' and var9 == 'X') or
+	(var1 == 'X' and var4 == 'X' and var7 == 'X') or
+	(var2 == 'X' and var5 == 'X' and var8 == 'X') or
+	(var3 == 'X' and var6 == 'X' and var9 == 'X') or
+	(var1 == 'X' and var5 == 'X' and var9 == 'X') or
+	(var3 == 'X' and var5 == 'X' and var7 == 'X')
+		victory = 'true'
 if victory == 'true':
 	print('\nCongratulations! You win!')
 else:
