@@ -1,7 +1,7 @@
 print('Hello World!') # Joke
 print('Welcome to my Tic Tac Toe game!\n') # Welcome screen
 victory = 'none' # Victory status
-while victory == "none": # Starting the while loop
+while victory == 'none': # Starting the while loop
 	print('Board key:') # Board Key. Will appear after every move
 	print('1 2 3') 
 	print('4 5 6')
@@ -12,4 +12,7 @@ while victory == "none": # Starting the while loop
 	print(var1, var2, var3) # First iteration of the empty board
 	print(var4, var5, var6)
 	print(var7, var8, var9)
-	var = input('\nPlease enter your selection:') # Placement selection
+	var = input('\nPlease enter your selection :') # Placement selection
+	if var == '3':
+		print('\n\n\n\n\n...yo mama')
+		victory = 'false'
