@@ -17,52 +17,52 @@ while victory == 'none': # Starting the while loop
 		if var1 == '~':
 			var1 = 'X'
 		else:
-			print('Invalid selection')
+			print('\nInvalid selection\n\n\n')
 	elif var == '2':
 		if var2 == '~':
 			var2 = 'X'
 		else:
-			print('Invalid selection')
+			print('\nInvalid selection\n\n\n')
 	elif var == '3':
 		if var3 == '~':
 			var3 = 'X'
 		else:
-			print('Invalid selection')
+			print('\nInvalid selection\n\n\n')
 	elif var == '4':
 		if var4 == '~':
 			var4 = 'X'
 		else:
-			print('Invalid selection')
+			print('\nInvalid selection\n\n\n')
 	elif var == '5':
 		if var5 == '~':
 			var5 = 'X'
 		else:
-			print('Invalid selection')
+			print('\nInvalid selection\n\n\n')
 	elif var == '6':
 		if var6 == '~':
 			var6 = 'X'
 		else:
-			print('Invalid selection')
+			print('\nInvalid selection\n\n\n')
 	elif var == '7':
 		if var7 == '~':
 			var7 = 'X'
 		else:
-			print('Invalid selection')
+			print('\nInvalid selection\n\n\n')
 	elif var == '8':
 		if var8 == '~':
 			var8 = 'X'
 		else:
-			print('Invalid selection')
+			print('\nInvalid selection\n\n\n')
 	elif var == '9':
 		if var9 == '~':
 			var9 = 'X'
 		else:
-			print('Invalid selection')
+			print('\nInvalid selection\n\n\n')
 	elif var == 'Trevor is amazing':
 		victory = 'true'
 	else:
-		print('Invalid selection')
+		print('\nInvalid selection\n\n\n')
 if victory == 'true':
-	print('Congratulations! You win!')
+	print('\nCongratulations! You win!')
 else:
-	print('You lost. So hard.')
+	print('\nYou lost. So hard.')
