@@ -13,22 +13,22 @@ def viccheck():
 		var3 == ecks and var5 == ecks and var7 == ecks):
 			if ecks == 'X':
 				return 'true'
-			else
+			else:
 				return 'false'
 	if (var1 != '~' and var2 != '~' and var3 != '~' and
 	var4 != '~' and var5 != '~' and var6 != '~' and
 	var7 != '~' and var8 != '~' and var9 != '~'):
 		return 'tie'
-var1, var2, var3, var4, var5, var6, var7, var8, var9 = '~' * 9
+ponzi = ['~'] * 9 # ponzi is the positions on the board
 while victory == 'none':
 	valid = 'true'
 	print('Board key:')
-	print('1 2 3') 
-	print('4 5 6')
-	print('7 8 9\n \n \n')
-	print(var1, var2, var3)
-	print(var4, var5, var6)
-	print(var7, var8, var9)
+	print('1 | 2 | 3\n--+---+--') 
+	print('4 | 5 | 6\n--+---+--')
+	print('7 | 8 | 9\n \n \n')
+	print(ponzi[1] + ' | ' + ponzi[2] + ' | ' + ponzi[3] + '\n--+---+--')
+	print(ponzi[4] + ' | ' + ponzi[5] + ' | ' + ponzi[6] + '\n--+---+--')
+	print(ponzi[7] + ' | ' + ponzi[8] + ' | ' + ponzi[9])
 	var = input('\nPlease enter your selection :')
 	if var == '1':
 		if var1 == '~':
@@ -116,9 +116,9 @@ while victory == 'none':
 	if catch is not None:
 		victory = catch
 		break
-print(var1, var2, var3)
-print(var4, var5, var6)
-print(var7, var8, var9)
+print(ponzi[1] + ' | ' + ponzi[2] + ' | ' + ponzi[3] + '\n--+---+--')
+print(ponzi[4] + ' | ' + ponzi[5] + ' | ' + ponzi[6] + '\n--+---+--')
+print(ponzi[7] + ' | ' + ponzi[8] + ' | ' + ponzi[9])
 if victory == 'true':
 	print('\nCongratulations! You win!')
 elif victory == 'tie':
