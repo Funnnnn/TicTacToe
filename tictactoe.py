@@ -29,7 +29,7 @@ while victory == 'none':
     print(ponzi[0] + ' | ' + ponzi[1] + ' | ' + ponzi[2] + '\n--+---+--')
     print(ponzi[3] + ' | ' + ponzi[4] + ' | ' + ponzi[5] + '\n--+---+--')
     print(ponzi[6] + ' | ' + ponzi[7] + ' | ' + ponzi[8])
-    var = input('\nPlease enter your selection :')
+    var = input('\nPlease enter your selection : ')
     for i, spot in enumerate(ponzi):
         if var == str(i + 1):
             if spot == '~':
