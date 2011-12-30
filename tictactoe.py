@@ -1,6 +1,29 @@
 print('\n\n\nHello World!')
 print('Welcome to my Tic Tac Toe game!\n')
 victory = 'none'
+def viccheck():
+	if (var1 == 'X' and var2 == 'X' and var3 == 'X' or
+	var4 == 'X' and var5 == 'X' and var6 == 'X' or
+	var7 == 'X' and var8 == 'X' and var9 == 'X' or
+	var1 == 'X' and var4 == 'X' and var7 == 'X' or
+	var2 == 'X' and var5 == 'X' and var8 == 'X' or
+	var3 == 'X' and var6 == 'X' and var9 == 'X' or
+	var1 == 'X' and var5 == 'X' and var9 == 'X' or
+	var3 == 'X' and var5 == 'X' and var7 == 'X'):
+		return 'true'
+	if (var1 == 'O' and var2 == 'O' and var3 == 'O' or
+	var4 == 'O' and var5 == 'O' and var6 == 'O' or
+	var7 == 'O' and var8 == 'O' and var9 == 'O' or
+	var1 == 'O' and var4 == 'O' and var7 == 'O' or
+	var2 == 'O' and var5 == 'O' and var8 == 'O' or
+	var3 == 'O' and var6 == 'O' and var9 == 'O' or
+	var1 == 'O' and var5 == 'O' and var9 == 'O' or
+	var3 == 'O' and var5 == 'O' and var7 == 'O'):
+		return 'false'
+	if (var1 != '~' and var2 != '~' and var3 != '~' and
+	var4 != '~' and var5 != '~' and var6 != '~' and
+	var7 != '~' and var8 != '~' and var9 != '~'):
+		return 'tie'
 var1, var2, var3, var4, var5, var6, var7, var8, var9 = '~' * 9
 while victory == 'none':
 	valid = 'true'
@@ -71,30 +94,10 @@ while victory == 'none':
 	else:
 		print('\nInvalid selection\n\n\n')
 		valid = 'false'
-	if (var1 == 'X' and var2 == 'X' and var3 == 'X' or
-	var4 == 'X' and var5 == 'X' and var6 == 'X' or
-	var7 == 'X' and var8 == 'X' and var9 == 'X' or
-	var1 == 'X' and var4 == 'X' and var7 == 'X' or
-	var2 == 'X' and var5 == 'X' and var8 == 'X' or
-	var3 == 'X' and var6 == 'X' and var9 == 'X' or
-	var1 == 'X' and var5 == 'X' and var9 == 'X' or
-	var3 == 'X' and var5 == 'X' and var7 == 'X'):
-		victory = 'true'
+	catch = viccheck()
+	if catch is not None:
+		victory = catch
 		break
-	if (var1 == 'O' and var2 == 'O' and var3 == 'O' or
-	var4 == 'O' and var5 == 'O' and var6 == 'O' or
-	var7 == 'O' and var8 == 'O' and var9 == 'O' or
-	var1 == 'O' and var4 == 'O' and var7 == 'O' or
-	var2 == 'O' and var5 == 'O' and var8 == 'O' or
-	var3 == 'O' and var6 == 'O' and var9 == 'O' or
-	var1 == 'O' and var5 == 'O' and var9 == 'O' or
-	var3 == 'O' and var5 == 'O' and var7 == 'O'):
-		victory = 'false'
-		break
-	if (var1 != '~' and var2 != '~' and var3 != '~' and
-	var4 != '~' and var5 != '~' and var6 != '~' and
-	var7 != '~' and var8 != '~' and var9 != '~'):
-		victory = 'tie'
 	if valid == 'true':
 		if var1 == '~':
 			var1 = 'O'
@@ -114,28 +117,10 @@ while victory == 'none':
 			var8 = 'O'
 		elif var9 == '~':
 			var9 = 'O'
-	if (var1 == 'X' and var2 == 'X' and var3 == 'X' or
-	var4 == 'X' and var5 == 'X' and var6 == 'X' or
-	var7 == 'X' and var8 == 'X' and var9 == 'X' or
-	var1 == 'X' and var4 == 'X' and var7 == 'X' or
-	var2 == 'X' and var5 == 'X' and var8 == 'X' or
-	var3 == 'X' and var6 == 'X' and var9 == 'X' or
-	var1 == 'X' and var5 == 'X' and var9 == 'X' or
-	var3 == 'X' and var5 == 'X' and var7 == 'X'):
-		victory = 'true'
-	if (var1 == 'O' and var2 == 'O' and var3 == 'O' or
-	var4 == 'O' and var5 == 'O' and var6 == 'O' or
-	var7 == 'O' and var8 == 'O' and var9 == 'O' or
-	var1 == 'O' and var4 == 'O' and var7 == 'O' or
-	var2 == 'O' and var5 == 'O' and var8 == 'O' or
-	var3 == 'O' and var6 == 'O' and var9 == 'O' or
-	var1 == 'O' and var5 == 'O' and var9 == 'O' or
-	var3 == 'O' and var5 == 'O' and var7 == 'O'):
-		victory = 'false'
-	if (var1 != '~' and var2 != '~' and var3 != '~' and
-	var4 != '~' and var5 != '~' and var6 != '~' and
-	var7 != '~' and var8 != '~' and var9 != '~'):
-		victory = 'tie'
+	catch = viccheck()
+	if catch is not None:
+		victory = catch
+		break
 print(var1, var2, var3)
 print(var4, var5, var6)
 print(var7, var8, var9)
