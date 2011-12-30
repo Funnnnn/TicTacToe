@@ -66,10 +66,8 @@ while victory == 'none':
 		else:
 			print('\nInvalid selection\n\n\n')
 			valid = 'false'
-	elif var == 'Trevor is amazing':
-		victory = 'true'
-	elif var == 'Tie game':
-		victory = 'tie'
+	elif var == 'pass'
+		print('Turn skipped.')
 	else:
 		print('\nInvalid selection\n\n\n')
 		valid = 'false'
