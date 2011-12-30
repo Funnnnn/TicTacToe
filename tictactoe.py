@@ -4,20 +4,20 @@ victory = 'none'
 def viccheck():
     for ecks in 'XO':
         if (var1 == ecks and var2 == ecks and var3 == ecks or
-        var4 == ecks and var5 == ecks and var6 == ecks or
-        var7 == ecks and var8 == ecks and var9 == ecks or
-        var1 == ecks and var4 == ecks and var7 == ecks or
-        var2 == ecks and var5 == ecks and var8 == ecks or
-        var3 == ecks and var6 == ecks and var9 == ecks or
-        var1 == ecks and var5 == ecks and var9 == ecks or
-        var3 == ecks and var5 == ecks and var7 == ecks):
+            var4 == ecks and var5 == ecks and var6 == ecks or
+            var7 == ecks and var8 == ecks and var9 == ecks or
+            var1 == ecks and var4 == ecks and var7 == ecks or
+            var2 == ecks and var5 == ecks and var8 == ecks or
+            var3 == ecks and var6 == ecks and var9 == ecks or
+            var1 == ecks and var5 == ecks and var9 == ecks or
+            var3 == ecks and var5 == ecks and var7 == ecks):
             if ecks == 'X':
                 return 'true'
             else:
                 return 'false'
     if (var1 != '~' and var2 != '~' and var3 != '~' and
-    var4 != '~' and var5 != '~' and var6 != '~' and
-    var7 != '~' and var8 != '~' and var9 != '~'):
+        var4 != '~' and var5 != '~' and var6 != '~' and
+        var7 != '~' and var8 != '~' and var9 != '~'):
         return 'tie'
 ponzi = ['~'] * 9 # ponzi is the positions on the board
 while victory == 'none':
@@ -30,7 +30,13 @@ while victory == 'none':
     print(ponzi[4] + ' | ' + ponzi[5] + ' | ' + ponzi[6] + '\n--+---+--')
     print(ponzi[7] + ' | ' + ponzi[8] + ' | ' + ponzi[9])
     var = input('\nPlease enter your selection :')
-    if var == '1':
+    for i, spot in enumerate( ponzi ):
+        if var == str(i):
+            if spot == '~':
+                ponzi[i] = 'X'
+            else:
+                print('\nInvalid selection\n\n\n')
+                valid = 'false'
         if var1 == '~':
             var1 = 'X'
         else:
