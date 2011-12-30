@@ -30,69 +30,16 @@ while victory == 'none':
     print(ponzi[4] + ' | ' + ponzi[5] + ' | ' + ponzi[6] + '\n--+---+--')
     print(ponzi[7] + ' | ' + ponzi[8] + ' | ' + ponzi[9])
     var = input('\nPlease enter your selection :')
-    for i, spot in enumerate( ponzi ):
+    for i, spot in enumerate(ponzi):
         if var == str(i):
             if spot == '~':
                 ponzi[i] = 'X'
             else:
                 print('\nInvalid selection\n\n\n')
                 valid = 'false'
-        if var1 == '~':
-            var1 = 'X'
-        else:
-            print('\nInvalid selection\n\n\n')
-            valid = 'false'
-    elif var == '2':
-        if var2 == '~':
-            var2 = 'X'
-        else:
-            print('\nInvalid selection\n\n\n')
-            valid = 'false'
-    elif var == '3':
-        if var3 == '~':
-            var3 = 'X'
-        else:
-            print('\nInvalid selection\n\n\n')
-            valid = 'false'
-    elif var == '4':
-        if var4 == '~':
-            var4 = 'X'
-        else:
-            print('\nInvalid selection\n\n\n')
-            valid = 'false'
-    elif var == '5':
-        if var5 == '~':
-            var5 = 'X'
-        else:
-            print('\nInvalid selection\n\n\n')
-            valid = 'false'
-    elif var == '6':
-        if var6 == '~':
-            var6 = 'X'
-        else:
-            print('\nInvalid selection\n\n\n')
-            valid = 'false'
-    elif var == '7':
-        if var7 == '~':
-            var7 = 'X'
-        else:
-            print('\nInvalid selection\n\n\n')
-            valid = 'false'
-    elif var == '8':
-        if var8 == '~':
-            var8 = 'X'
-        else:
-            print('\nInvalid selection\n\n\n')
-            valid = 'false'
-    elif var == '9':
-        if var9 == '~':
-            var9 = 'X'
-        else:
-            print('\nInvalid selection\n\n\n')
-            valid = 'false'
-    elif var == 'pass':
+    if var == 'pass':
         print('Turn skipped.')
-    else:
+    elif var in '123456789':
         print('\nInvalid selection\n\n\n')
         valid = 'false'
     catch = viccheck()
