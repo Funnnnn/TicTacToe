@@ -89,7 +89,7 @@ while victory == 'none':
 		else:
 			print('\nInvalid selection\n\n\n')
 			valid = 'false'
-	elif var == 'pass'
+	elif var == 'pass':
 		print('Turn skipped.')
 	else:
 		print('\nInvalid selection\n\n\n')
