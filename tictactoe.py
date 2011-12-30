@@ -2,24 +2,19 @@ print('\n\n\nHello World!')
 print('Welcome to my Tic Tac Toe game!\n')
 victory = 'none'
 def viccheck():
-	if (var1 == 'X' and var2 == 'X' and var3 == 'X' or
-	var4 == 'X' and var5 == 'X' and var6 == 'X' or
-	var7 == 'X' and var8 == 'X' and var9 == 'X' or
-	var1 == 'X' and var4 == 'X' and var7 == 'X' or
-	var2 == 'X' and var5 == 'X' and var8 == 'X' or
-	var3 == 'X' and var6 == 'X' and var9 == 'X' or
-	var1 == 'X' and var5 == 'X' and var9 == 'X' or
-	var3 == 'X' and var5 == 'X' and var7 == 'X'):
-		return 'true'
-	if (var1 == 'O' and var2 == 'O' and var3 == 'O' or
-	var4 == 'O' and var5 == 'O' and var6 == 'O' or
-	var7 == 'O' and var8 == 'O' and var9 == 'O' or
-	var1 == 'O' and var4 == 'O' and var7 == 'O' or
-	var2 == 'O' and var5 == 'O' and var8 == 'O' or
-	var3 == 'O' and var6 == 'O' and var9 == 'O' or
-	var1 == 'O' and var5 == 'O' and var9 == 'O' or
-	var3 == 'O' and var5 == 'O' and var7 == 'O'):
-		return 'false'
+	for ecks in 'XO':
+		if (var1 == ecks and var2 == ecks and var3 == ecks or
+		var4 == ecks and var5 == ecks and var6 == ecks or
+		var7 == ecks and var8 == ecks and var9 == ecks or
+		var1 == ecks and var4 == ecks and var7 == ecks or
+		var2 == ecks and var5 == ecks and var8 == ecks or
+		var3 == ecks and var6 == ecks and var9 == ecks or
+		var1 == ecks and var5 == ecks and var9 == ecks or
+		var3 == ecks and var5 == ecks and var7 == ecks):
+			if ecks == 'X':
+				return 'true'
+			else
+				return 'false'
 	if (var1 != '~' and var2 != '~' and var3 != '~' and
 	var4 != '~' and var5 != '~' and var6 != '~' and
 	var7 != '~' and var8 != '~' and var9 != '~'):
