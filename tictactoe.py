@@ -3,21 +3,21 @@ print('Welcome to my Tic Tac Toe game!\n')
 victory = 'none'
 def viccheck():
     for ecks in 'XO':
-        if (var1 == ecks and var2 == ecks and var3 == ecks or
-            var4 == ecks and var5 == ecks and var6 == ecks or
-            var7 == ecks and var8 == ecks and var9 == ecks or
-            var1 == ecks and var4 == ecks and var7 == ecks or
-            var2 == ecks and var5 == ecks and var8 == ecks or
-            var3 == ecks and var6 == ecks and var9 == ecks or
-            var1 == ecks and var5 == ecks and var9 == ecks or
-            var3 == ecks and var5 == ecks and var7 == ecks):
+        if (ponzi[0] == ecks and ponzi[1] == ecks and ponzi[2] == ecks or
+            ponzi[3] == ecks and ponzi[4] == ecks and ponzi[5] == ecks or
+            ponzi[6] == ecks and ponzi[7] == ecks and ponzi[8] == ecks or
+            ponzi[0] == ecks and ponzi[3] == ecks and ponzi[6] == ecks or
+            ponzi[1] == ecks and ponzi[4] == ecks and ponzi[7] == ecks or
+            ponzi[2] == ecks and ponzi[5] == ecks and ponzi[8] == ecks or
+            ponzi[0] == ecks and ponzi[4] == ecks and ponzi[8] == ecks or
+            ponzi[2] == ecks and ponzi[4] == ecks and ponzi[6] == ecks):
             if ecks == 'X':
                 return 'true'
             else:
                 return 'false'
-    if (var1 != '~' and var2 != '~' and var3 != '~' and
-        var4 != '~' and var5 != '~' and var6 != '~' and
-        var7 != '~' and var8 != '~' and var9 != '~'):
+    if (ponzi[0] != '~' and ponzi[1] != '~' and ponzi[2] != '~' and
+        ponzi[3] != '~' and ponzi[4] != '~' and ponzi[5] != '~' and
+        ponzi[6] != '~' and ponzi[7] != '~' and ponzi[8] != '~'):
         return 'tie'
 ponzi = ['~'] * 9 # ponzi is the positions on the board
 while victory == 'none':
@@ -26,12 +26,12 @@ while victory == 'none':
     print('1 | 2 | 3\n--+---+--') 
     print('4 | 5 | 6\n--+---+--')
     print('7 | 8 | 9\n \n \n')
-    print(ponzi[1] + ' | ' + ponzi[2] + ' | ' + ponzi[3] + '\n--+---+--')
-    print(ponzi[4] + ' | ' + ponzi[5] + ' | ' + ponzi[6] + '\n--+---+--')
-    print(ponzi[7] + ' | ' + ponzi[8] + ' | ' + ponzi[9])
+    print(ponzi[0] + ' | ' + ponzi[1] + ' | ' + ponzi[2] + '\n--+---+--')
+    print(ponzi[3] + ' | ' + ponzi[4] + ' | ' + ponzi[5] + '\n--+---+--')
+    print(ponzi[6] + ' | ' + ponzi[7] + ' | ' + ponzi[8])
     var = input('\nPlease enter your selection :')
     for i, spot in enumerate(ponzi):
-        if var == str(i):
+        if var == str(i + 1):
             if spot == '~':
                 ponzi[i] = 'X'
             else:
@@ -39,7 +39,7 @@ while victory == 'none':
                 valid = 'false'
     if var == 'pass':
         print('Turn skipped.')
-    elif var in '123456789':
+    elif var not in '123456789':
         print('\nInvalid selection\n\n\n')
         valid = 'false'
     catch = viccheck()
@@ -47,31 +47,17 @@ while victory == 'none':
         victory = catch
         break
     if valid == 'true':
-        if var1 == '~':
-            var1 = 'O'
-        elif var2 == '~':
-            var2 = 'O'
-        elif var3 == '~':
-            var3 = 'O'
-        elif var4 == '~':
-            var4 = 'O'
-        elif var5 == '~':
-            var5 = 'O'
-        elif var6 == '~':
-            var6 = 'O'
-        elif var7 == '~':
-            var7 = 'O'
-        elif var8 == '~':
-            var8 = 'O'
-        elif var9 == '~':
-            var9 = 'O'
+        for i, spot in enumerate(ponzi):
+            if spot == '~':
+                ponzi[i] = 'O'
+                break
     catch = viccheck()
     if catch is not None:
         victory = catch
         break
-print(ponzi[1] + ' | ' + ponzi[2] + ' | ' + ponzi[3] + '\n--+---+--')
-print(ponzi[4] + ' | ' + ponzi[5] + ' | ' + ponzi[6] + '\n--+---+--')
-print(ponzi[7] + ' | ' + ponzi[8] + ' | ' + ponzi[9])
+print(ponzi[0] + ' | ' + ponzi[1] + ' | ' + ponzi[2] + '\n--+---+--')
+print(ponzi[3] + ' | ' + ponzi[4] + ' | ' + ponzi[5] + '\n--+---+--')
+print(ponzi[6] + ' | ' + ponzi[7] + ' | ' + ponzi[8])
 if victory == 'true':
     print('\nCongratulations! You win!')
 elif victory == 'tie':
